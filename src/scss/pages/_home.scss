@@ -61,36 +61,33 @@
   @at-root .ratingStar {
     width: 100%;
     text-align: center;
-
+    font-size: rem(36px);
   }
 }
 
 // 새소식
 .news {
   @at-root .iframeWrapper {
-    @include ratio;
-  } 
+    @include ratio(16, 9);
+  }
 }
 
 // 게시판
 .board {
   position: relative;
-
   &__item {
     margin: 8px 0;
     @include flexbox;
     column-gap: rem(8px);
   }
-
   &__link {
     flex-grow: 1;
     @include textOver;
   }
-
   &__date {
+    /* flex-basis: fill; */
     white-space: nowrap;
   }
-
   &__more {
     @include posRightTop;
   }
@@ -102,4 +99,13 @@
 
 // 트위터
 .twitter {
+  &__userProfile {
+    @include ratio(1, 1);
+  }
+
+  &__userProfileImage {
+    @include respons(width, 100%);
+    border-radius: 50%;
+    @include fit(cover, 100%, 100%);
+  }
 }
