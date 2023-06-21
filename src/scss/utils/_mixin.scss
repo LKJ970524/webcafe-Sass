@@ -1,7 +1,5 @@
 @use "./../utils/unit" as *;
 
-// 포지션 관련 믹스인 ???
-
 @mixin pos {
   position: absolute;
 }
@@ -49,8 +47,8 @@
 }
 
 @mixin padding($spacing) {
-  @include paddingX;
-  @include paddingY;
+  @include paddingX($spacing);
+  @include paddingY($spacing);
 }
 
 @mixin paddingX($spacing) {
@@ -78,8 +76,8 @@
 }
 
 @mixin margin($spacing) {
-  @include marginX;
-  @include marginY;
+  @include marginX($spacing);
+  @include marginY($spacing);
 }
 
 @mixin autoMargin {
